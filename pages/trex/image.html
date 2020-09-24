@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Daum에디터 - 이미지 첨부</title> 
+<script src="../../js/popup.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="../../css/popup.css" type="text/css"  charset="utf-8"/>
+<link rel="stylesheet" href="/Content/style_sub_test.css" type="text/css"  charset="utf-8"/>
+<link rel="stylesheet" href="/Content/main.css" type="text/css"  charset="utf-8"/>
+	<script src="/Scripts/prototype.js"></script>
+	<script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/topbar.js"></script>
+    <script src="/Scripts/common.js"></script>
+	<script src="/Scripts/func.js"></script>
+	<script src="/Scripts/controll.js"></script>
+	
+<script type="text/javascript">
+// <![CDATA[
+	
+	function done(data) {
+		if (typeof(execAttach) == 'undefined') { //Virtual Function
+	        return;
+	    }
+		var _mockdata = {
+			'imageurl': 'https://s3.ap-northeast-2.amazonaws.com/taling.me/Content/Uploads/Blog/'+data,
+			'filename': data,
+			'filesize': 640,
+			'imagealign': 'left',
+			'originalurl': 'https://s3.ap-northeast-2.amazonaws.com/taling.me/Content/Uploads/Blog/'+data,
+			'thumburl': 'https://s3.ap-northeast-2.amazonaws.com/taling.me/Content/Uploads/Blog/'+data
+		};
+		execAttach(_mockdata);
+		closeWindow();
+	}
+
+	function initUploader(){
+	    var _opener = PopupUtil.getOpener();
+	    if (!_opener) {
+	        alert('잘못된 경로로 접근하셨습니다.');
+	        return;
+	    }
+	    
+	    var _attacher = getAttacher('image', _opener);
+	    registerAction(_attacher);
+	}
+
+
+// ]]>
+</script>
+</head>
+<body onload="initUploader();">
+<div class="wrapper">
+	<div class="header">
+		<h1>사진 첨부</h1>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<form method="POST" id="frm-register-detail" enctype="multipart/form-data">
+	<div class="body">
+		<p>
+			<div id="cover-image" class="clearbt">				
+				<img src="//placehold.it/1x1" alt="" id="img-cover" style="float: none; margin: 0 auto; position: relative; overflow: hidden; max-width:100%" />
+			</div>
+		</p>
+		
+		<p>
+			<div class="col-sm-3" style="float: none; margin: 0 auto; position: relative; overflow: hidden; top:20px;">
+				<button class="btn btn-upload-cover btn-block">
+					첨부할 이미지 찾기
+				</button>
+				<input type="file" id="input-cover-image" class="input-file-hidden" name="CoverImage"/>
+			</div>
+		</p>
+		
+		
+	</div>
+	<br>
+	<br>
+	<div class="footer" style="top:20px;">
+		<p><a href="#" onclick="closeWindow();" title="닫기" class="close">닫기</a></p>
+		<ul>
+			<li class="submit"><input type="submit" style="width:47px;height:25px;background: #ff005a;color: #fff;cursor:pointer;border-radius: 4px;" value="다음"></li>
+			<li class="cancel"><a href="#" onclick="closeWindow();" title="취소" class="btnlink">취소</a></li>
+		</ul>
+	</div>
+	</form>
+</div>
+<script>
+	$('#input-cover-image').change(function (e) {
+
+		var file = (e.target || window.event.srcElement).files[0];
+
+		var reader = new FileReader();
+		reader.onload = function() {
+			$('#img-cover')
+				.attr('src', reader.result)
+				.show();
+		}		
+		reader.readAsDataURL(file);
+
+
+	});
+
+	$('#frm-register-detail').submit(function (e) {
+
+        e.preventDefault();
+			
+		var formData = new FormData(this);
+				   
+		$.ajax({
+			type: 'POST',
+			url: '/tutor/Image.php',
+			contentType: false,
+			data: formData,
+			processData: false,
+			success: function (response) {
+				isUploading = false;
+			   if(response == '0000')
+				{
+					//alert('커리큘럼 등록이 완료되었습니다.');
+					//location.href="/tutor/Register/PriceInfo"
+				}
+				else
+				{
+					done(response);
+				}
+			},
+			error: function(response) {
+				isUploading = false;
+			}
+		});
+		return false;
+	});
+</script>
+</body>
+</html>

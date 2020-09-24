@@ -239,8 +239,8 @@
         },
         _isForceTextMode: function() {
             // 기존에는 아래의 조건이었으나 모바일에서의 호환은 아직 문제가 많아 제한함. 20140430
-            // ($tx.ios && $tx.ios_ver < 5) || ($tx.android && $tx.android_ver < 3)
-            return $tx.ios || $tx.android;
+            ($tx.ios && $tx.ios_ver < 5) || ($tx.android && $tx.android_ver < 3)
+            // return $tx.ios || $tx.android;
         },
         /**
          * Canvas의 mode를 바꾸는것으로, 현재 활성화되어있는 panel을 변경한다.

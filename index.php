@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail.css?ver=200609" media="all">
 	<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail2.css?ver=200708" media="all">
 	<link rel="stylesheet" href="css/editor.css" type="text/css" charset="utf-8"/>
+	<link rel="stylesheet" href="css/content_view.css" type="text/css" charset="utf-8"/>
 	<link rel="stylesheet" href="css/editaling.css" type="text/css" charset="utf-8"/>
     <script src="js/editor_loader.js?environment=development" type="text/javascript" charset="utf-8"></script>
 
@@ -40,11 +41,11 @@
 							</div>
 						</li>
 						<!-- 이미지 첨부 버튼 끝 -->
-						<!--li class="tx-list">
+						<li class="tx-list">
 							<div unselectable="on" id="tx_file" class="tx-file tx-btn-trans">
 								<a href="javascript:;" title="파일" class="tx-text">파일</a>
 							</div>
-						</li-->
+						</li>
 						<li class="tx-list">
 							<div unselectable="on" id="tx_media" class="tx-media tx-btn-trans">
 								<a href="javascript:;" title="외부컨텐츠" class="tx-text">외부컨텐츠</a>
@@ -500,6 +501,74 @@
 
 <!-- Sample: Saving Contents -->
 <script type="text/javascript">
+
+	var template_1 = function () {
+		var content = `
+		<div class="con-box">
+			<div class="vod-detail-event-highlight-area">
+				<div class="vod-detail-event-highlight-inner">
+					기간 한정! <span class="vod-detail-event-text-color">쏟아지는 혜택</span>의 기회를 놓치지 마세요!
+				</div>
+			</div>
+		</div>
+		`;
+		Editor.getCanvas().pasteContent(content);
+	};
+	var template_2 = function () {
+		var content = `
+		<section class="section_contents" style="background:#f9f9f9;">
+                <div class="section_row">
+                    <div class="col_left">
+                        <div class="title_navi">
+                            <p class="title_main">이 강의를 <br class="mobile_none">들어야 하는 <br class="mobile_none">이유</p>
+                        </div>
+                    </div><!--// col_left-->
+                    <div class="col_right">
+                        <div class="big_number_list_area">
+                            <div class="big_number_list">
+                                <span class="numbering">01</span>
+                                <div class="list_contents">
+                                    <strong class="list_title">제목을 입력하세요.</strong>
+                                    <p class="list_text">내용을 입력하세요.</p>
+                                </div>
+							</div>
+							<div class="big_number_list">
+                                <span class="numbering">02</span>
+                                <div class="list_contents">
+                                    <strong class="list_title">제목을 입력하세요.</strong>
+                                    <p class="list_text">내용을 입력하세요.</p>
+                                </div>
+							</div>
+							<div class="big_number_list">
+                                <span class="numbering">03</span>
+                                <div class="list_contents">
+                                    <strong class="list_title">제목을 입력하세요.</strong>
+                                    <p class="list_text">내용을 입력하세요.</p>
+                                </div>
+							</div>
+							<div class="big_number_list">
+                                <span class="numbering">04</span>
+                                <div class="list_contents">
+                                    <strong class="list_title">제목을 입력하세요.</strong>
+                                    <p class="list_text">내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--// col_right-->
+                </div><!--// section_row-->
+        </section>
+		`;
+		Editor.getCanvas().pasteContent(content);
+	};
+	var saveContentTest = function () {
+		var content = Editor.getContent(); // 콘텐츠 GET!
+		var doc = document;
+		var contentViewTest = doc.getElementById('contentViewTest');
+		var contentCodeViewTest = doc.getElementById('contentCodeViewTest');
+		contentViewTest.innerHTML = content;
+		contentCodeViewTest.innerText = content;
+	};
+
 	/* 예제용 함수 */
 	function saveContent() {
 		Editor.save(); // 이 함수를 호출하여 글을 등록하면 된다.
@@ -524,12 +593,7 @@
 			return false;
 		}
 
-		var doc = document;
-		var contentViewTest = doc.getElementById('contentViewTest');
-		var contentCodeViewTest = doc.getElementById('contentCodeViewTest');
-		contentViewTest.innerHTML = content;
-		contentCodeViewTest.innerText = content;
-		return false; // [steve] 원래는 true로 해야하지만 테스트를 위해 막아놓음.
+		return true;
 	}
 
 	/**
@@ -578,7 +642,15 @@
         return true;
 	}
 </script>
-<div><button onclick='saveContent()' style="width:100%;padding:15px 50px;font-size:20px;">테스트</button></div>
+<div style="overflow:hidden;">
+	<div style="float:left;">
+		<button onclick='template_1()' style="padding:15px 20px;font-size:20px;">얼리버드</button>
+		<button onclick='template_2()' style="padding:15px 20px;font-size:20px;">빅넘버리스트</button>
+	</div>
+	<div style="float:right;">
+		<button onclick='saveContentTest()' style="padding:15px 50px;font-size:20px;color:blue">확인하기</button>
+	</div>
+</div>
 <!-- End: Saving Contents -->
 <div id="contentViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;">미리보기 테스트 영역</div>
 <div id="contentCodeViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;font-family:'Courier New',monspace;">코드 확인 영역</div>

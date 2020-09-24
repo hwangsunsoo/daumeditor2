@@ -4,14 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-    <link rel="stylesheet" href="css/editor.css" type="text/css" charset="utf-8"/>
 	<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail.css?ver=200609" media="all">
 	<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail2.css?ver=200708" media="all">
+	<link rel="stylesheet" href="css/editor.css" type="text/css" charset="utf-8"/>
+	<link rel="stylesheet" href="css/editaling.css" type="text/css" charset="utf-8"/>
     <script src="js/editor_loader.js?environment=development" type="text/javascript" charset="utf-8"></script>
 
 </head>
-<body>
-<div class="body">
+<body style="padding:30px;">
+
+<div class="editaling">
 
 	<!-- 에디터 시작 -->
 	<!--
@@ -19,9 +21,7 @@
 		등록하기 위한 Form으로 상황에 맞게 수정하여 사용한다. Form 이름은 에디터를 생성할 때 설정값으로 설정한다.
 	-->
 	<form name="tx_editor_form" id="tx_editor_form" action="/My/blogpost2.php" method="post" accept-charset="utf-8">
-	
-	<br>
-	<br>
+
 		<!-- 에디터 컨테이너 시작 -->
 		<div id="tx_trex_container" class="tx-editor-container">
 			<!-- 사이드바 -->
@@ -445,6 +445,7 @@
 	</form>
 </div>
 <!-- 에디터 끝 -->
+
 <script type="text/javascript">
 	var config = {
 		txHost: '', /* 런타임 시 리소스들을 로딩할 때 필요한 부분으로, 경로가 변경되면 이 부분 수정이 필요. ex) http://xxx.xxx.com */
@@ -523,7 +524,12 @@
 			return false;
 		}
 
-		return true;
+		var doc = document;
+		var contentViewTest = doc.getElementById('contentViewTest');
+		var contentCodeViewTest = doc.getElementById('contentCodeViewTest');
+		contentViewTest.innerHTML = content;
+		contentCodeViewTest.innerText = content;
+		return false; // [steve] 원래는 true로 해야하지만 테스트를 위해 막아놓음.
 	}
 
 	/**
@@ -572,8 +578,10 @@
         return true;
 	}
 </script>
-<div style="float:right;"><button onclick='saveContent()'>수정하기</button></div>
+<div><button onclick='saveContent()' style="width:100%;padding:15px 50px;font-size:20px;">테스트</button></div>
 <!-- End: Saving Contents -->
+<div id="contentViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;">미리보기 테스트 영역</div>
+<div id="contentCodeViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;font-family:'Courier New',monspace;">코드 확인 영역</div>
 
 <!-- Sample: Loading Contents -->
 <textarea id="sample_contents_source" style="display:none;">

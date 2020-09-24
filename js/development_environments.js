@@ -55,11 +55,11 @@
     function addEditorEnvIndicator() {
         if (window.Editor && Editor.__EDITOR_LOADED) {
             var indicator = document.createElement("span");
-            indicator.innerHTML = "DEVELOPMENT MODE";
+            indicator.innerHTML = "EDITALING v1.0"; // "DEVELOPMENT MODE"
             $tx.setStyle(indicator, {
                 position: "absolute",
                 fontSize: "13px",
-                color: "green",
+                color: "hotpink",
                 fontFamily: "courier,serif",
                 right: "10px",
                 bottom : "10px"

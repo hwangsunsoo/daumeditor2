@@ -1,2 +1,69 @@
-.editaling {
+html, body, .te-wrap {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+.te-wrap {
+    position: relative;
+    height: 100%;
+    font-family: 'Noto Sans KR';
+    font-size: 14px;
+}
+.te-wrap a {
+    cursor: pointer;
+}
+.te-area-header {
+    position: relative;
+    height: 60px;
+    background: #fbfbfb;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    box-sizing: border-box;
+}
+.te-logo-editaling {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    line-height: 1;
+}
+.te-area-editor {
+    padding-right: 300px;
+}
+.te-area-sidebar {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fbfbfb;
+    border-left: 1px solid #e5e5e5;
+    box-shadow: -3px -1px 4px 0 rgba(0,0,0,.06);
+}
+.te-button-template {
+    display: block;
+    margin-top: 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid hsla(0,0%,80%,.5);
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
+}
+.te-button-publish {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid hsla(0,0%,80%,.5);
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
+    text-align: center;
 }

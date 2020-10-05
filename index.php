@@ -12,11 +12,16 @@
     <script src="js/editor_loader.js?environment=development" type="text/javascript" charset="utf-8"></script>
 
 </head>
-<body style="padding:30px;">
+<body>
 
-<div class="editaling">
+<div class="te-wrap">
 
-	<!-- 에디터 시작 -->
+<div class="te-area-header">
+	<h1 class="te-logo-editaling">에디탈잉</h1>
+</div>
+
+<!-- 에디터 시작 -->
+<div class="te-area-editor">
 	<!--
 		@decsription
 		등록하기 위한 Form으로 상황에 맞게 수정하여 사용한다. Form 이름은 에디터를 생성할 때 설정값으로 설정한다.
@@ -444,7 +449,7 @@
 		</div>
 		<!-- 에디터 컨테이너 끝 -->
 	</form>
-</div>
+</div><!-- //te-area-editor -->
 <!-- 에디터 끝 -->
 
 <script type="text/javascript">
@@ -505,6 +510,7 @@
 	var template_1 = function () {
 		var content = `
 		<div class="con-box">
+			<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 			<div class="vod-detail-event-highlight-area">
 				<div class="vod-detail-event-highlight-inner">
 					기간 한정! <span class="vod-detail-event-text-color">쏟아지는 혜택</span>의 기회를 놓치지 마세요!
@@ -517,51 +523,57 @@
 	var template_2 = function () {
 		var content = `
 		<section class="section_contents" style="background:#f9f9f9;">
-                <div class="section_row">
-                    <div class="col_left">
-                        <div class="title_navi">
-                            <p class="title_main">이 강의를 <br class="mobile_none">들어야 하는 <br class="mobile_none">이유</p>
-                        </div>
-                    </div><!--// col_left-->
-                    <div class="col_right">
-                        <div class="big_number_list_area">
-                            <div class="big_number_list">
-                                <span class="numbering">01</span>
-                                <div class="list_contents">
-                                    <strong class="list_title">제목을 입력하세요.</strong>
-                                    <p class="list_text">내용을 입력하세요.</p>
-                                </div>
+			<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+			<div class="section_row">
+				<div class="col_left">
+					<div class="title_navi">
+						<p class="title_main">이 강의를 <br class="mobile_none">들어야 하는 <br class="mobile_none">이유</p>
+					</div>
+				</div><!--// col_left-->
+				<div class="col_right">
+					<div class="big_number_list_area">
+						<div class="big_number_list">
+							<span class="numbering">01</span>
+							<div class="list_contents">
+								<strong class="list_title">제목을 입력하세요.</strong>
+								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<div class="big_number_list">
-                                <span class="numbering">02</span>
-                                <div class="list_contents">
-                                    <strong class="list_title">제목을 입력하세요.</strong>
-                                    <p class="list_text">내용을 입력하세요.</p>
-                                </div>
+							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+						</div>
+						<div class="big_number_list">
+							<span class="numbering">02</span>
+							<div class="list_contents">
+								<strong class="list_title">제목을 입력하세요.</strong>
+								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<div class="big_number_list">
-                                <span class="numbering">03</span>
-                                <div class="list_contents">
-                                    <strong class="list_title">제목을 입력하세요.</strong>
-                                    <p class="list_text">내용을 입력하세요.</p>
-                                </div>
+							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+						</div>
+						<div class="big_number_list">
+							<span class="numbering">03</span>
+							<div class="list_contents">
+								<strong class="list_title">제목을 입력하세요.</strong>
+								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<div class="big_number_list">
-                                <span class="numbering">04</span>
-                                <div class="list_contents">
-                                    <strong class="list_title">제목을 입력하세요.</strong>
-                                    <p class="list_text">내용을 입력하세요.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--// col_right-->
-                </div><!--// section_row-->
+							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+						</div>
+						<div class="big_number_list">
+							<span class="numbering">04</span>
+							<div class="list_contents">
+								<strong class="list_title">제목을 입력하세요.</strong>
+								<p class="list_text">내용을 입력하세요.</p>
+							</div>
+							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+						</div>
+					</div>
+				</div><!--// col_right-->
+			</div><!--// section_row-->
         </section>
 		`;
 		Editor.getCanvas().pasteContent(content);
 	};
 	var saveContentTest = function () {
-		var content = Editor.getContent(); // 콘텐츠 GET!
+		var preContent = Editor.getContent(); // 콘텐츠 GET!
+		var content = preContent.replaceAll('<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>','');
 		var doc = document;
 		var contentViewTest = doc.getElementById('contentViewTest');
 		var contentCodeViewTest = doc.getElementById('contentCodeViewTest');
@@ -642,18 +654,15 @@
         return true;
 	}
 </script>
-<div style="overflow:hidden;">
-	<div style="float:left;">
-		<button onclick='template_1()' style="padding:15px 20px;font-size:20px;">얼리버드</button>
-		<button onclick='template_2()' style="padding:15px 20px;font-size:20px;">빅넘버리스트</button>
-	</div>
-	<div style="float:right;">
-		<button onclick='saveContentTest()' style="padding:15px 50px;font-size:20px;color:blue">확인하기</button>
-	</div>
+<div class="te-area-sidebar">
+	<strong class="te-title-template">브오디 부분 템플릿</strong>
+	<a class="te-button-template" onclick='template_1()'>얼리버드</a>
+	<a class="te-button-template" onclick='template_2()'>빅넘버리스트</a>
 </div>
+<a class="te-button-publish" onclick='saveContentTest()'>발행</a>
 <!-- End: Saving Contents -->
-<div id="contentViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;">미리보기 테스트 영역</div>
-<div id="contentCodeViewTest" style="margin-top:30px;padding:8px;border:1px solid hotpink;font-family:'Courier New',monspace;">코드 확인 영역</div>
+<div id="contentViewTest" style="margin-top:30px;margin-right:300px;padding:8px;border:1px solid hotpink;">미리보기 테스트 영역</div>
+<div id="contentCodeViewTest" style="margin-top:30px;margin-right:300px;padding:8px;border:1px solid hotpink;font-family:'Courier New',monspace;">코드 확인 영역</div>
 
 <!-- Sample: Loading Contents -->
 <textarea id="sample_contents_source" style="display:none;">
@@ -689,9 +698,9 @@
 		});
 	}
 </script>
-<div></div>
 <script>loadContent();</script>
 <!-- End: Loading Contents -->
 
+</div>
 </body>
 </html>

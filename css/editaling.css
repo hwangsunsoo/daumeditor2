@@ -23,8 +23,12 @@ body {
 }
 .te-logo-editaling {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 9px;
+    left: 9px;
+    width: 243px;
+    height: 39px;
+    background-image: url(../images/logo_editaling.png);
+    background-size: 100% auto;
     margin: 0;
     line-height: 1;
 }

@@ -117,7 +117,8 @@
 			'<link rel="stylesheet" href="' + cssBasePath + 'content_view.css" type="text/css"></link>' +
             '<link rel="stylesheet" href="' + cssBasePath + 'content_wysiwyg.css" type="text/css"></link>' +
 			'<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail.css?ver=200609" media="all">' +
-			'<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail2.css?ver=200708" media="all">' +
+            '<link rel="stylesheet" href="//taling.me/sample/vod2/Vod/css/a3_vod_detail2.css?ver=200708" media="all">' +
+            '<link rel="stylesheet" href="' + cssBasePath + 'editaling_inner.css" type="text/css"></link>' +
             '<style id="txStyleForSetRule"></style>' +
 			'</head>' +
             '<body class="tx-content-container">' +

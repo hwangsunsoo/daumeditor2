@@ -17,7 +17,7 @@
 <div class="te-wrap">
 
 <div class="te-area-header">
-	<h1 class="te-logo-editaling">에디탈잉</h1>
+	<h1 class="te-logo-editaling"></h1>
 </div>
 
 <!-- 에디터 시작 -->
@@ -475,7 +475,7 @@
                 */
             },
 			styles: {
-				color: "#123456", /* 기본 글자색 */
+				color: "#000", /* 기본 글자색 */
 				fontFamily: "굴림", /* 기본 글자체 */
 				fontSize: "10pt", /* 기본 글자크기 */
 				backgroundColor: "#fff", /*기본 배경색 */
@@ -510,7 +510,7 @@
 	var template_1 = function () {
 		var content = `
 		<div class="con-box">
-			<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+			<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 			<div class="vod-detail-event-highlight-area">
 				<div class="vod-detail-event-highlight-inner">
 					기간 한정! <span class="vod-detail-event-text-color">쏟아지는 혜택</span>의 기회를 놓치지 마세요!
@@ -523,7 +523,7 @@
 	var template_2 = function () {
 		var content = `
 		<section class="section_contents" style="background:#f9f9f9;">
-			<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+			<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 			<div class="section_row">
 				<div class="col_left">
 					<div class="title_navi">
@@ -538,7 +538,7 @@
 								<strong class="list_title">제목을 입력하세요.</strong>
 								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+							<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 						</div>
 						<div class="big_number_list">
 							<span class="numbering">02</span>
@@ -546,7 +546,7 @@
 								<strong class="list_title">제목을 입력하세요.</strong>
 								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+							<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 						</div>
 						<div class="big_number_list">
 							<span class="numbering">03</span>
@@ -554,7 +554,7 @@
 								<strong class="list_title">제목을 입력하세요.</strong>
 								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+							<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 						</div>
 						<div class="big_number_list">
 							<span class="numbering">04</span>
@@ -562,7 +562,7 @@
 								<strong class="list_title">제목을 입력하세요.</strong>
 								<p class="list_text">내용을 입력하세요.</p>
 							</div>
-							<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
+							<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>
 						</div>
 					</div>
 				</div><!--// col_right-->
@@ -573,7 +573,7 @@
 	};
 	var saveContentTest = function () {
 		var preContent = Editor.getContent(); // 콘텐츠 GET!
-		var content = preContent.replaceAll('<button onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>','');
+		var content = preContent.replaceAll('<button class="te-button-remove" onclick="this.parentElement.remove();">[[[--- 삭제 ---]]]</button>','');
 		var doc = document;
 		var contentViewTest = doc.getElementById('contentViewTest');
 		var contentCodeViewTest = doc.getElementById('contentCodeViewTest');

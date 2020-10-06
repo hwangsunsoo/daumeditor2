@@ -54,18 +54,19 @@
 (function() {
     function addEditorEnvIndicator() {
         if (window.Editor && Editor.__EDITOR_LOADED) {
-            var indicator = document.createElement("span");
-            indicator.innerHTML = "EDITALING v1.0"; // "DEVELOPMENT MODE"
-            $tx.setStyle(indicator, {
-                position: "absolute",
-                fontSize: "13px",
-                color: "hotpink",
-                fontFamily: "courier,serif",
-                right: "10px",
-                bottom : "10px"
-            });
-            var canvas = Editor.getCanvas().elContainer; //$tx("tx_canvas");
-            canvas.appendChild(indicator);
+            // var indicator = document.createElement("span");
+            // indicator.innerHTML = "EDITALING v1.0"; // DEVELOPMENT MODE
+            // $tx.setStyle(indicator, {
+            //     position: "absolute",
+            //     fontSize: "13px",
+            //     color: "hotpink",
+            //     fontFamily: "courier,serif",
+            //     right: "10px",
+            //     bottom : "10px"
+            // });
+            // var canvas = Editor.getCanvas().elContainer; //$tx("tx_canvas");
+            // canvas.appendChild(indicator);
+            console.log('EDITALING v1.0 DEVELOPMENT MODE');
         } else {
             setTimeout(arguments.callee, 500);
         }

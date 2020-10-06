@@ -25,7 +25,7 @@
 			pMarginZero: true,
             selectedMode: "html",
             readonly: _FALSE,
-            initHeight: 400,
+            initHeight: 800,
             minHeight: 200,
             ext: 'html',
             param: "",

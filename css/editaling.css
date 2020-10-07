@@ -3,12 +3,22 @@ html, body, .te-wrap {
 }
 body {
     margin: 0;
+    font-family: 'Noto Sans KR';
 }
-
+.te-blind {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+}
 .te-wrap {
     position: relative;
     height: 100%;
-    font-family: 'Noto Sans KR';
     font-size: 14px;
 }
 .te-wrap a {
@@ -53,7 +63,7 @@ body {
     margin-top: 10px;
     padding: 20px;
     background: #fff;
-    border: 1px solid hsla(0,0%,80%,.5);
+    border: 1px solid #ccc;
     box-sizing: border-box;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
 }
@@ -66,24 +76,67 @@ body {
     height: 38px;
     line-height: 38px;
     background: #fff;
-    border: 1px solid hsla(0,0%,80%,.5);
+    border: 1px solid #ccc;
     box-sizing: border-box;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
     text-align: center;
 }
-.tx-toolbar-basic, .tx-toolbar-boundary {
-    height: 30px;
-    box-sizing: border-box;
+.te-area-menu-editor {
+    position: relative;
+    padding: 10px;
     background: #fbfbfb;
-    border-width: 0 0 1px 0;
-    border-color: #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0;
 }
-.tx-canvas {
+.te-menu-editor {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.te-menu-editor ~ .te-menu-editor {
+    margin-left: 6px;
+}
+.te-button-template:hover,
+.te-button-publish:hover,
+.te-menu-editor:hover {
+    border-color: #9c9c80;
+}
+.te-button-editor,
+.te-button-editor.tx-arrow {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    color: #111;
+}
+.te-button-editor.tx-arrow {
+    float: none;
+    width: auto;
+    text-indent: 0;
+    overflow: visible;
+}
+.te-wrap .tx-canvas {
     border: 0;
 }
-.tx-fontfamily-menu, .tx-fontsize-menu {
-    width: 320px;
+.te-wrap .tx-menu {
+    top: 37px;
 }
-.tx-toolbar .tx-fontfamily-menu .tx-bar li a {
+.te-wrap .tx-fontfamily-menu,
+.te-wrap .tx-fontsize-menu,
+.te-wrap .tx-lineheight-menu {
+    width: auto;
+}
+.te-wrap .tx-menu {
+    border-color: #9c9c80;
+}
+.te-wrap .tx-menu-list-item {
+    font-family: 'Noto Sans KR';
     font-size: 14px;
+}
+.te-wrap .tx-menu-list-item a:hover {
+    background: #ffdde0;
 }

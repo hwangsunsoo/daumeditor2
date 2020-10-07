@@ -70,11 +70,11 @@
 							</div>
 						</li>
 						<!-- 이미지 첨부 버튼 끝 -->
-						<!--li class="tx-list">
+						<li class="tx-list">
 							<div unselectable="on" id="tx_file" class="tx-file tx-btn-trans">
 								<a href="javascript:;" title="파일" class="tx-text">파일</a>
 							</div>
-						</li-->
+						</li>
 						<li class="tx-list">
 							<div unselectable="on" id="tx_media" class="tx-media tx-btn-trans">
 								<a href="javascript:;" title="외부컨텐츠" class="tx-text">외부컨텐츠</a>
@@ -227,12 +227,12 @@
 					</li>
 				</ul>
 				<ul class="tx-bar tx-bar-left tx-group-etc">
-					<!--li class="tx-list">
+					<li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-lbg 	tx-emoticon" id="tx_emoticon">
 							<a href="javascript:;" class="tx-icon" title="이모티콘">이모티콘</a>
 						</div>
 						<div id="tx_emoticon_menu" class="tx-emoticon-menu tx-menu" unselectable="on"></div>
-					</li-->
+					</li>
 					<li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-bg 	tx-link" id="tx_link">
 							<a href="javascript:;" class="tx-icon" title="링크 (Ctrl+K)">링크</a>

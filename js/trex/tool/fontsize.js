@@ -11,13 +11,13 @@ TrexConfig.addTool(
 		sync: _TRUE,
         status: _TRUE,
         options: [
-            { label: '쓸데없는 재능은 없다. (12px)', title: '12px', data: '12px', klass: 'tx-12px' },
-            { label: '쓸데없는 재능은 없다. (13px)', title: '13px', data: '13px', klass: 'tx-13px' },
-            { label: '쓸데없는 재능은 없다. (14px)', title: '14px', data: '14px', klass: 'tx-14px' },
-            { label: '쓸데없는 재능은 없다. (15px)', title: '15px', data: '15px', klass: 'tx-15px' },
-            { label: '쓸데없는 재능은 없다. (16px)', title: '16px', data: '16px', klass: 'tx-16px' },
-            { label: '쓸데없는 재능은 없다. (17px)', title: '17px', data: '17px', klass: 'tx-17px' },
-            { label: '쓸데없는 재능은 없다. (18px)', title: '18px', data: '18px', klass: 'tx-18px' },
+            { label: '쓸데없는 재능은 없다 (12px)', title: '12px', data: '12px', klass: 'tx-12px' },
+            { label: '쓸데없는 재능은 없다 (13px)', title: '13px', data: '13px', klass: 'tx-13px' },
+            { label: '쓸데없는 재능은 없다 (14px)', title: '14px', data: '14px', klass: 'tx-14px' },
+            { label: '쓸데없는 재능은 없다 (15px)', title: '15px', data: '15px', klass: 'tx-15px' },
+            { label: '쓸데없는 재능은 없다 (16px)', title: '16px', data: '16px', klass: 'tx-16px' },
+            { label: '쓸데없는 재능은 없다 (17px)', title: '17px', data: '17px', klass: 'tx-17px' },
+            { label: '쓸데없는 재능은 없다 (18px)', title: '18px', data: '18px', klass: 'tx-18px' },
 		]
 		// options: [
 		// 	{ label: '가나다라마바사 (8pt)', title: '8pt', data: '8pt', klass: 'tx-8pt' },

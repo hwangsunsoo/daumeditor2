@@ -29,8 +29,8 @@ TrexConfig.addTool(
 			// { label: 'Verdana (<span class="tx-txt">abcde</span>)', title: 'Verdana', data: 'Verdana,sans-serif', klass: 'tx-verdana' },
 			// { label: 'Courier New (<span class="tx-txt">abcde</span>)', title: 'Courier New', data: 'Courier New,monspace', klass: 'tx-courier-new' }
 			{ label: TXMSG('@fontfamily.notoSansKr')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.notoSansKr'), data: 'Noto Sans KR', klass: 'tx-notoSansKr' },
-			{ label: TXMSG('@fontfamily.dotum')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.dotum'), data: 'Dotum,돋움,sans-serif', klass: 'tx-dotum' },
-			{ label: TXMSG('@fontfamily.gungsuh')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.gungsuh'), data: 'Gungsuh,궁서,serif', klass: 'tx-gungseo' },
+			{ label: TXMSG('@fontfamily.dotum')+' (<span class="">돋는다 돋움체</span>)', title: TXMSG('@fontfamily.dotum'), data: 'Dotum,돋움,sans-serif', klass: 'tx-dotum' },
+			{ label: TXMSG('@fontfamily.gungsuh')+' (<span class="">진지하다 궁서체</span>)', title: TXMSG('@fontfamily.gungsuh'), data: 'Gungsuh,궁서,serif', klass: 'tx-gungseo' },
 			{ label: 'Courier New (<span class="">All originals are special</span>)', title: 'Courier New', data: 'Courier New,monspace', klass: 'tx-courier-new' },
 		]
 	}

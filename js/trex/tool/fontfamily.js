@@ -10,7 +10,8 @@ TrexMessage.addMsg({
 	'@fontfamily.gulim': '굴림',
 	'@fontfamily.batang': '바탕',
 	'@fontfamily.dotum': '돋움',
-	'@fontfamily.gungsuh': '궁서'
+	'@fontfamily.gungsuh': '궁서',
+	'@fontfamily.notoSansKr': 'Noto Sans KR',
 });
 
 TrexConfig.addTool(
@@ -20,13 +21,17 @@ TrexConfig.addTool(
 		status: _TRUE,
 		useFavorite: _TRUE,
 		options: [
-			{ label: TXMSG('@fontfamily.gulim')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.gulim'), data: 'Gulim,굴림,AppleGothic,sans-serif', klass: 'tx-gulim' },
-			{ label: TXMSG('@fontfamily.batang')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.batang'), data: 'Batang,바탕,serif', klass: 'tx-batang' },
-			{ label: TXMSG('@fontfamily.dotum')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.dotum'), data: 'Dotum,돋움,sans-serif', klass: 'tx-dotum' },
-			{ label: TXMSG('@fontfamily.gungsuh')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.gungsuh'), data: 'Gungsuh,궁서,serif', klass: 'tx-gungseo' },
-			{ label: 'Arial (<span class="tx-txt">abcde</span>)', title: 'Arial', data: 'Arial,sans-serif', klass: 'tx-arial' },
-			{ label: 'Verdana (<span class="tx-txt">abcde</span>)', title: 'Verdana', data: 'Verdana,sans-serif', klass: 'tx-verdana' },
-            { label: 'Courier New (<span class="tx-txt">abcde</span>)', title: 'Courier New', data: 'Courier New,monspace', klass: 'tx-courier-new' }
+			// { label: TXMSG('@fontfamily.gulim')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.gulim'), data: 'Gulim,굴림,AppleGothic,sans-serif', klass: 'tx-gulim' },
+			// { label: TXMSG('@fontfamily.batang')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.batang'), data: 'Batang,바탕,serif', klass: 'tx-batang' },
+			// { label: TXMSG('@fontfamily.dotum')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.dotum'), data: 'Dotum,돋움,sans-serif', klass: 'tx-dotum' },
+			// { label: TXMSG('@fontfamily.gungsuh')+' (<span class="tx-txt">가나다라</span>)', title: TXMSG('@fontfamily.gungsuh'), data: 'Gungsuh,궁서,serif', klass: 'tx-gungseo' },
+			// { label: 'Arial (<span class="tx-txt">abcde</span>)', title: 'Arial', data: 'Arial,sans-serif', klass: 'tx-arial' },
+			// { label: 'Verdana (<span class="tx-txt">abcde</span>)', title: 'Verdana', data: 'Verdana,sans-serif', klass: 'tx-verdana' },
+			// { label: 'Courier New (<span class="tx-txt">abcde</span>)', title: 'Courier New', data: 'Courier New,monspace', klass: 'tx-courier-new' }
+			{ label: TXMSG('@fontfamily.notoSansKr')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.notoSansKr'), data: 'Noto Sans KR', klass: 'tx-notoSansKr' },
+			{ label: TXMSG('@fontfamily.dotum')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.dotum'), data: 'Dotum,돋움,sans-serif', klass: 'tx-dotum' },
+			{ label: TXMSG('@fontfamily.gungsuh')+' (<span class="">세상의 모든 재능</span>)', title: TXMSG('@fontfamily.gungsuh'), data: 'Gungsuh,궁서,serif', klass: 'tx-gungseo' },
+			{ label: 'Courier New (<span class="">All originals are special</span>)', title: 'Courier New', data: 'Courier New,monspace', klass: 'tx-courier-new' },
 		]
 	}
 );

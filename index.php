@@ -31,6 +31,7 @@
 		<!-- 에디터 컨테이너 시작 -->
 		<div id="tx_trex_container" class="tx-editor-container">
 			<!-- 사이드바 -->
+			<?php /*
 			<div id="tx_sidebar" class="tx-sidebar">
 				<div class="tx-sidebar-boundary">
 					<!-- 사이드바 / 첨부 -->
@@ -85,6 +86,7 @@
 					</ul>
 				</div>
 			</div>
+			*/ ?>
 
 			<!-- 툴바 - 기본 시작 -->
 			<!--
@@ -209,19 +211,19 @@
 						</div>
 						<div id="tx_emoticon_menu" class="tx-emoticon-menu tx-menu" unselectable="on"></div>
 					</li>
-					<li class="tx-list">
+					<!-- <li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-bg 	tx-link" id="tx_link">
 							<a href="javascript:;" class="tx-icon" title="링크 (Ctrl+K)">링크</a>
 						</div>
 						<div id="tx_link_menu" class="tx-link-menu tx-menu"></div>
-					</li>
+					</li> -->
 					<li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-bg 	tx-specialchar" id="tx_specialchar">
 							<a href="javascript:;" class="tx-icon" title="특수문자">특수문자</a>
 						</div>
 						<div id="tx_specialchar_menu" class="tx-specialchar-menu tx-menu"></div>
 					</li>
-					<li class="tx-list">
+					<!-- <li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-bg 	tx-table" id="tx_table">
 							<a href="javascript:;" class="tx-icon" title="표만들기">표만들기</a>
 						</div>
@@ -233,15 +235,15 @@
 								<div class="tx-menu-enter"></div>
 							</div>
 						</div>
-					</li>
-					<li class="tx-list">
+					</li> -->
+					<!-- <li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-rbg 	tx-horizontalrule" id="tx_horizontalrule">
 							<a href="javascript:;" class="tx-icon" title="구분선">구분선</a>
 						</div>
 						<div id="tx_horizontalrule_menu" class="tx-horizontalrule-menu tx-menu" unselectable="on"></div>
-					</li>
+					</li> -->
 				</ul>
-				<ul class="tx-bar tx-bar-left">
+				<!-- <ul class="tx-bar tx-bar-left">
 					<li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-lbg 	tx-richtextbox" id="tx_richtextbox">
 							<a href="javascript:;" class="tx-icon" title="글상자">글상자</a>
@@ -284,8 +286,8 @@
 							<a href="javascript:;" class="tx-icon" title="사전">사전</a>
 						</div>
 					</li>
-				</ul>
-				<ul class="tx-bar tx-bar-left tx-group-undo">
+				</ul> -->
+				<!-- <ul class="tx-bar tx-bar-left tx-group-undo">
 					<li class="tx-list">
 						<div unselectable="on" class="		 tx-btn-lbg 	tx-undo" id="tx_undo">
 							<a href="javascript:;" class="tx-icon" title="실행취소 (Ctrl+Z)">실행취소</a>
@@ -296,11 +298,18 @@
 							<a href="javascript:;" class="tx-icon" title="다시실행 (Ctrl+Y)">다시실행</a>
 						</div>
 					</li>
-				</ul>
-				<ul class="tx-bar tx-bar-right">
+				</ul> -->
+				<!-- <ul class="tx-bar tx-bar-right">
 					<li class="tx-list">
 						<div unselectable="on" class="tx-btn-nlrbg tx-advanced" id="tx_advanced">
 							<a href="javascript:;" class="tx-icon" title="툴바 더보기">툴바 더보기</a>
+						</div>
+					</li>
+				</ul> -->
+				<ul class="tx-bar tx-bar-right tx-nav-opt">
+					<li class="tx-list">
+						<div unselectable="on" class="tx-switchtoggle" id="tx_switchertoggle">
+							<a href="javascript:;" title="에디터 타입">에디터</a>
 						</div>
 					</li>
 				</ul>
@@ -475,9 +484,9 @@
                 */
             },
 			styles: {
-				color: "#000", /* 기본 글자색 */
-				fontFamily: "굴림", /* 기본 글자체 */
-				fontSize: "10pt", /* 기본 글자크기 */
+				color: "#111", /* 기본 글자색 */
+				fontFamily: "Noto Sans KR", /* 기본 글자체 */
+				fontSize: "14px", /* 기본 글자크기 */
 				backgroundColor: "#fff", /*기본 배경색 */
 				lineHeight: "1.5", /*기본 줄간격 */
 				padding: "8px" /* 위지윅 영역의 여백 */

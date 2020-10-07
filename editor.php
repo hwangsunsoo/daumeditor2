@@ -498,12 +498,12 @@
                 */
             },
 			styles: {
-				color: "#123456", /* 기본 글자색 */
-				fontFamily: "굴림", /* 기본 글자체 */
-				fontSize: "10pt", /* 기본 글자크기 */
+				color: "#111", /* 기본 글자색 */
+				fontFamily: "Noto Sans KR", /* 기본 글자체 */
+				fontSize: "14px", /* 기본 글자크기 */
 				backgroundColor: "#fff", /*기본 배경색 */
 				lineHeight: "1.5", /*기본 줄간격 */
-				padding: "8px" /* 위지윅 영역의 여백 */
+				padding: "10px" /* 위지윅 영역의 여백 */
 			},
 			showGuideArea: false
 		},

@@ -71,3 +71,19 @@ body {
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
     text-align: center;
 }
+.tx-toolbar-basic, .tx-toolbar-boundary {
+    height: 30px;
+    box-sizing: border-box;
+    background: #fbfbfb;
+    border-width: 0 0 1px 0;
+    border-color: #e5e5e5;
+}
+.tx-canvas {
+    border: 0;
+}
+.tx-fontfamily-menu, .tx-fontsize-menu {
+    width: 320px;
+}
+.tx-toolbar .tx-fontfamily-menu .tx-bar li a {
+    font-size: 14px;
+}

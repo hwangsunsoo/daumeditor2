@@ -28,7 +28,9 @@
     .tx-fontfamily-menu .tx-menu-list .tx-gungseo {font-family:gungseo, '궁서'}
     .tx-fontfamily-menu .tx-menu-list .tx-arial {font-family:Arial, Helvetica, sans-serif}
     .tx-fontfamily-menu .tx-menu-list .tx-verdana {font-family:Verdana, Geneva, sans-serif}
-    .tx-fontfamily-menu .tx-menu-list .tx-courier-new {font-family:'Courier New', Courier, monospace}
+	.tx-fontfamily-menu .tx-menu-list .tx-courier-new {font-family:'Courier New', Courier, monospace}
+	
+	.tx-fontfamily-menu .tx-menu-list .tx-notoSansKr {font-family:'Noto Sans KR', Helvetica, sans-serif}
 
 /*==== fontsize ====*/
 	.tx-fontsize {padding-right:0;}
@@ -45,6 +47,14 @@
 	.tx-fontsize-menu li a.tx-18pt { font-size:18pt; }
 	.tx-fontsize-menu li a.tx-24pt { font-size:24pt; }
 	.tx-fontsize-menu li a.tx-36pt { font-size:36pt; }
+
+	.tx-fontsize-menu li a.tx-12px { font-size:12px; }
+	.tx-fontsize-menu li a.tx-13px { font-size:13px; }
+	.tx-fontsize-menu li a.tx-14px { font-size:14px; }
+	.tx-fontsize-menu li a.tx-15px { font-size:15px; }
+	.tx-fontsize-menu li a.tx-16px { font-size:16px; }
+	.tx-fontsize-menu li a.tx-17px { font-size:17px; }
+	.tx-fontsize-menu li a.tx-18px { font-size:18px; }
 
 /*==== font style ====*/
 	.tx-bold a.tx-icon {background-position:-24px -9px;}

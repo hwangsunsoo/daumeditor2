@@ -9,18 +9,27 @@ TrexConfig.addTool(
 	"fontsize", 
 	{
 		sync: _TRUE,
-		status: _TRUE,
-		options: [
-			{ label: '가나다라마바사 (8pt)', title: '8pt', data: '8pt', klass: 'tx-8pt' },
-			{ label: '가나다라마바사 (9pt)', title: '9pt', data: '9pt', klass: 'tx-9pt' },
-			{ label: '가나다라마바사 (10pt)', title: '10pt', data: '10pt', klass: 'tx-10pt' },
-			{ label: '가나다라마바사 (11pt)', title: '11pt', data: '11pt', klass: 'tx-11pt' },
-			{ label: '가나다라마바사 (12pt)', title: '12pt', data: '12pt', klass: 'tx-12pt' },
-			{ label: '가나다라마바사 (14pt)', title: '14pt', data: '14pt', klass: 'tx-14pt' },
-			{ label: '가나다라마바사 (18pt)', title: '18pt', data: '18pt', klass: 'tx-18pt' },
-			{ label: '가나다라마 (24pt)', title: '24pt', data: '24pt', klass: 'tx-24pt' },
-			{ label: '가나다 (36pt)', title: '36pt', data: '36pt', klass: 'tx-36pt' }
+        status: _TRUE,
+        options: [
+            { label: '쓸데없는 재능은 없다. (12px)', title: '12px', data: '12px', klass: 'tx-12px' },
+            { label: '쓸데없는 재능은 없다. (13px)', title: '13px', data: '13px', klass: 'tx-13px' },
+            { label: '쓸데없는 재능은 없다. (14px)', title: '14px', data: '14px', klass: 'tx-14px' },
+            { label: '쓸데없는 재능은 없다. (15px)', title: '15px', data: '15px', klass: 'tx-15px' },
+            { label: '쓸데없는 재능은 없다. (16px)', title: '16px', data: '16px', klass: 'tx-16px' },
+            { label: '쓸데없는 재능은 없다. (17px)', title: '17px', data: '17px', klass: 'tx-17px' },
+            { label: '쓸데없는 재능은 없다. (18px)', title: '18px', data: '18px', klass: 'tx-18px' },
 		]
+		// options: [
+		// 	{ label: '가나다라마바사 (8pt)', title: '8pt', data: '8pt', klass: 'tx-8pt' },
+		// 	{ label: '가나다라마바사 (9pt)', title: '9pt', data: '9pt', klass: 'tx-9pt' },
+		// 	{ label: '가나다라마바사 (10pt)', title: '10pt', data: '10pt', klass: 'tx-10pt' },
+		// 	{ label: '가나다라마바사 (11pt)', title: '11pt', data: '11pt', klass: 'tx-11pt' },
+		// 	{ label: '가나다라마바사 (12pt)', title: '12pt', data: '12pt', klass: 'tx-12pt' },
+		// 	{ label: '가나다라마바사 (14pt)', title: '14pt', data: '14pt', klass: 'tx-14pt' },
+		// 	{ label: '가나다라마바사 (18pt)', title: '18pt', data: '18pt', klass: 'tx-18pt' },
+		// 	{ label: '가나다라마 (24pt)', title: '24pt', data: '24pt', klass: 'tx-24pt' },
+		// 	{ label: '가나다 (36pt)', title: '36pt', data: '36pt', klass: 'tx-36pt' }
+		// ]
 	}
 );
 
@@ -57,16 +66,28 @@ Trex.Tool.FontSize = Trex.Class.create({
             { title: '18pt', data: '5' },
             { title: '24pt', data: '6' },
             { title: '36pt', data: '7' },
-            { title: '7.5pt', data: '10px'},
-            { title: '8pt', data: '11px' },
-            { title: '9pt', data: '12px' },
-            { title: '10pt', data: '13px' },
-            { title: '11pt', data: '15px' },
-            { title: '12pt', data: '16px' },
-            { title: '14pt', data: '19px' },
-            { title: '18pt', data: '24px' },
-            { title: '24pt', data: '32px' },
-            { title: '36pt', data: '48px' },
+
+            // { title: '7.5pt', data: '10px'},
+            // { title: '8pt', data: '11px' },
+            // { title: '9pt', data: '12px' },
+            // { title: '10pt', data: '13px' },
+            // { title: '11pt', data: '15px' },
+            // { title: '12pt', data: '16px' },
+            // { title: '14pt', data: '19px' },
+            // { title: '18pt', data: '24px' },
+            // { title: '24pt', data: '32px' },
+            // { title: '36pt', data: '48px' },
+            { title: '10px', data: '10px'},
+            { title: '11px', data: '11px' },
+            { title: '12px', data: '12px' },
+            { title: '13px', data: '13px' },
+            { title: '15px', data: '15px' },
+            { title: '16px', data: '16px' },
+            { title: '19px', data: '19px' },
+            { title: '24px', data: '24px' },
+            { title: '32px', data: '32px' },
+            { title: '48px', data: '48px' },
+
             { title: '8pt', data: 'x-small' },
             { title: '10pt', data: 'small' },
             { title: '12pt', data: 'medium' },

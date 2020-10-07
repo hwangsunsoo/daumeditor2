@@ -15,12 +15,12 @@
             doctype: "auto", // edge
             mode: ["text", "html", "source"],
             styles: {
-                color: "#333333",
-                fontFamily: "돋움",
-                fontSize: "9pt",
-                backgroundColor: "#ffffff",
+                color: "#111",
+                fontFamily: "Noto Sans KR",
+                fontSize: "14px",
+                backgroundColor: "#fff",
                 lineHeight: "1.5",
-                padding: "8px"
+                padding: "10px"
             },
 			pMarginZero: true,
             selectedMode: "html",
